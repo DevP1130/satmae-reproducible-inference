@@ -153,11 +153,24 @@ activemq-data/
 .env
 .envrc
 .venv
-env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# SatMAE reproduction: large/local artifacts (keep env/environment.yml tracked)
+data/
+weights/
+*.pth
+*.pt
+*.tif
+results/*.png
+logs/*.tmp
+
+# NOTE: the "ENV/" pattern above matches our env/ dir case-insensitively on
+# macOS (core.ignorecase), which would otherwise swallow env/environment.yml.
+!env/
+!env/environment.yml
 
 # Spyder project settings
 .spyderproject
