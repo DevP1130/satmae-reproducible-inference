@@ -36,3 +36,27 @@ cuda 11.3
 cuda_available True
 Missing keys (0): []
 Unexpected keys (0): []
+Wrote metrics to /storage/ice1/5/8/dpatel878/satmae-reproducible-inference/results/metrics.json
+Wrote confusion matrix to /storage/ice1/5/8/dpatel878/satmae-reproducible-inference/results/confusion_matrix.csv
+n_images=84939 top1=62.65% top5=85.79% runtime=271.7s gpu=NVIDIA L40S peak_mem=1.835140096
+Wall time (s): 278
+== sacct ==
+JobID           JobName  Partition      State ExitCode    Elapsed     MaxRSS  MaxVMSize 
+------------ ---------- ---------- ---------- -------- ---------- ---------- ---------- 
+6115115      satmae-ev+    coc-gpu    RUNNING      0:0   00:04:44                       
+6115115.bat+      batch               RUNNING      0:0   00:04:44                       
+6115115.ext+     extern               RUNNING      0:0   00:04:44                       
+Thu Oct  8 11:21:13 PM EDT 2026
+== done ==
+---------------------------------------
+Begin Slurm Epilog: Oct-08-2026 23:21:13
+Job ID:        6115115
+User ID:       dpatel878
+Account:       coc
+Job name:      satmae-eval-full
+Resources:     cpu=8,gres/gpu:l40s=1,mem=96G,node=1
+Rsrc Used:     cput=00:37:52,vmem=0,walltime=00:04:44,mem=87949460K,energy_used=0
+Partition:     coc-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-004-21-0
+---------------------------------------
