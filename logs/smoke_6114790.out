@@ -1,0 +1,62 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-08-2026 22:13:11
+Job ID:    6114790
+User ID:   dpatel878
+Account:   coc
+Job name:  satmae-smoke
+Partition: coc-gpu
+QOS:       coc-ice
+---------------------------------------
+== job: smoke_test  job_id: 6114790  node: atl1-1-03-004-25-0.pace.gatech.edu ==
+Thu Oct  8 10:13:11 PM EDT 2026
+== nvidia-smi ==
+Thu Oct  8 22:13:11 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 615.71.09              KMD Version: 615.71.09     CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:44:00.0 Off |                    0 |
+| N/A   37C    P8             35W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+== torch/CUDA versions ==
+torch 1.12.1
+cuda 11.3
+cuda_available True
+Missing keys (0): []
+Unexpected keys (0): []
+Wrote metrics to /storage/ice1/5/8/dpatel878/satmae-reproducible-inference/results/smoke/metrics.json
+Wrote confusion matrix to /storage/ice1/5/8/dpatel878/satmae-reproducible-inference/results/smoke/confusion_matrix.csv
+n_images=100 top1=97.00% top5=100.00% runtime=31.1s gpu=NVIDIA L40S peak_mem=1.171531776
+Wall time (s): 72
+== sacct ==
+JobID           JobName  Partition      State ExitCode    Elapsed     MaxRSS  MaxVMSize 
+------------ ---------- ---------- ---------- -------- ---------- ---------- ---------- 
+6114790      satmae-sm+    coc-gpu    RUNNING      0:0   00:01:58                       
+6114790.bat+      batch               RUNNING      0:0   00:01:58                       
+6114790.ext+     extern               RUNNING      0:0   00:01:58                       
+Thu Oct  8 10:15:09 PM EDT 2026
+== done ==
+---------------------------------------
+Begin Slurm Epilog: Oct-08-2026 22:15:09
+Job ID:        6114790
+User ID:       dpatel878
+Account:       coc
+Job name:      satmae-smoke
+Resources:     cpu=4,gres/gpu:l40s=1,mem=32G,node=1
+Rsrc Used:     cput=00:07:52,vmem=0,walltime=00:01:58,mem=7390304K,energy_used=0
+Partition:     coc-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-004-25-0
+---------------------------------------

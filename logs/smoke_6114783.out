@@ -1,0 +1,44 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-08-2026 22:12:36
+Job ID:    6114783
+User ID:   dpatel878
+Account:   coc
+Job name:  satmae-smoke
+Partition: coc-gpu
+QOS:       coc-ice
+---------------------------------------
+== job: smoke_test  job_id: 6114783  node: atl1-1-03-004-25-0.pace.gatech.edu ==
+Thu Oct  8 10:12:36 PM EDT 2026
+== nvidia-smi ==
+Thu Oct  8 22:12:36 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 615.71.09              KMD Version: 615.71.09     CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:44:00.0 Off |                    0 |
+| N/A   37C    P8             35W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+---------------------------------------
+Begin Slurm Epilog: Oct-08-2026 22:12:38
+Job ID:        6114783
+User ID:       dpatel878
+Account:       coc
+Job name:      satmae-smoke
+Resources:     cpu=4,gres/gpu:l40s=1,mem=32G,node=1
+Rsrc Used:     cput=00:00:08,vmem=0,walltime=00:00:02,mem=32176K,energy_used=0
+Partition:     coc-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-004-25-0
+---------------------------------------

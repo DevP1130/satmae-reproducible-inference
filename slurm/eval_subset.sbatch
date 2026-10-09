@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=satmae-eval-full
+#SBATCH --job-name=satmae-eval-subset
 #SBATCH -A coc
 #SBATCH -p coc-gpu
 #SBATCH --qos=coc-ice
 #SBATCH --gres=gpu:l40s:1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=96G
+#SBATCH --mem=64G
 #SBATCH --time=04:00:00
 #SBATCH --output=logs/eval_full_%j.out
 #SBATCH --error=logs/eval_full_%j.err
@@ -32,7 +32,7 @@ python -c "import torch; print('torch', torch.__version__); print('cuda', torch.
 START_TIME=$(date +%s)
 
 python scripts/evaluate.py \
-  --csv data/val_prepared.csv \
+  --csv data/val_subset5000.csv \
   --data-root data \
   --checkpoint weights/finetune-vit-base-e7.pth \
   --batch-size 64 \

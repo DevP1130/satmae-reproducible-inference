@@ -1,0 +1,4 @@
+== torch/CUDA versions ==
+torch 1.12.1
+cuda 11.3
+cuda_available True

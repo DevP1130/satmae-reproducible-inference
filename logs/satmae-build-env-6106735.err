@@ -1,0 +1,20 @@
+
+CondaError: Run 'conda init' before 'conda deactivate'
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/timm/__init__.py", line 2, in <module>
+    from .models import create_model, list_models, is_model, list_modules, model_entrypoint, \
+  File "/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/timm/models/__init__.py", line 1, in <module>
+    from .cspnet import *
+  File "/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/timm/models/cspnet.py", line 20, in <module>
+    from .helpers import build_model_with_cfg
+  File "/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/timm/models/helpers.py", line 17, in <module>
+    from .layers import Conv2dSame, Linear
+  File "/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/timm/models/layers/__init__.py", line 7, in <module>
+    from .cond_conv2d import CondConv2d, get_condconv_initializer
+  File "/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/timm/models/layers/cond_conv2d.py", line 16, in <module>
+    from .helpers import to_2tuple
+  File "/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/timm/models/layers/helpers.py", line 6, in <module>
+    from torch._six import container_abcs
+ImportError: cannot import name 'container_abcs' from 'torch._six' (/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/torch/_six.py)

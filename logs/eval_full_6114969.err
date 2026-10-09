@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/storage/ice1/5/8/dpatel878/satmae-reproducible-inference/scripts/evaluate.py", line 218, in <module>
+    main()
+  File "/storage/ice1/5/8/dpatel878/satmae-reproducible-inference/scripts/evaluate.py", line 156, in main
+    c1, c5 = topk_correct(output, targets, topk=(1, 5))
+  File "/storage/ice1/5/8/dpatel878/satmae-reproducible-inference/scripts/evaluate.py", line 70, in topk_correct
+    return [correct[:k].reshape(-1).float().sum().item() for k in topk]
+  File "/storage/ice1/5/8/dpatel878/satmae-reproducible-inference/scripts/evaluate.py", line 70, in <listcomp>
+    return [correct[:k].reshape(-1).float().sum().item() for k in topk]
+  File "/home/hice1/dpatel878/scratch/envs/satmae/lib/python3.9/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 347380) is killed by signal: Killed. 
+[2026-10-08T22:59:52.524] error: Detected 1 oom_kill event in StepId=6114969.batch. Some of the step tasks have been OOM Killed.

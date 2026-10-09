@@ -12,7 +12,7 @@
 
 set -euo pipefail
 
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+REPO_ROOT="${SLURM_SUBMIT_DIR}"
 cd "${REPO_ROOT}"
 mkdir -p logs results
 
@@ -24,7 +24,7 @@ nvidia-smi | tee -a "logs/smoke_${SLURM_JOB_ID}_nvidia-smi.txt"
 
 # Activate environment -- adjust to how conda is set up on the cluster.
 source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate ~/scratch/envs/satmae
+set +u; conda activate ~/scratch/envs/satmae; set -u
 
 echo "== torch/CUDA versions ==" | tee "logs/smoke_${SLURM_JOB_ID}_versions.txt"
 python -c "import torch; print('torch', torch.__version__); print('cuda', torch.version.cuda); print('cuda_available', torch.cuda.is_available())" \

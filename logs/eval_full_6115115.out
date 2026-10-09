@@ -1,0 +1,38 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-08-2026 23:16:30
+Job ID:    6115115
+User ID:   dpatel878
+Account:   coc
+Job name:  satmae-eval-full
+Partition: coc-gpu
+QOS:       coc-ice
+---------------------------------------
+== job: eval_full  job_id: 6115115  node: atl1-1-03-004-21-0.pace.gatech.edu ==
+Thu Oct  8 11:16:30 PM EDT 2026
+== nvidia-smi ==
+Thu Oct  8 23:16:30 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 615.71.09              KMD Version: 615.71.09     CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   33C    P8             33W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+== torch/CUDA versions ==
+torch 1.12.1
+cuda 11.3
+cuda_available True
+Missing keys (0): []
+Unexpected keys (0): []

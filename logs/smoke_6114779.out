@@ -1,0 +1,21 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-08-2026 22:11:24
+Job ID:    6114779
+User ID:   dpatel878
+Account:   coc
+Job name:  satmae-smoke
+Partition: coc-gpu
+QOS:       coc-ice
+---------------------------------------
+---------------------------------------
+Begin Slurm Epilog: Oct-08-2026 22:11:24
+Job ID:        6114779
+User ID:       dpatel878
+Account:       coc
+Job name:      satmae-smoke
+Resources:     cpu=4,gres/gpu:l40s=1,mem=32G,node=1
+Rsrc Used:     cput=00:00:00,vmem=0,walltime=00:00:00,mem=3100K,energy_used=0
+Partition:     coc-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-004-25-0
+---------------------------------------

@@ -1,0 +1,37 @@
+---------------------------------------
+Begin Slurm Prolog: Oct-08-2026 12:43:27
+Job ID:    6107078
+User ID:   dpatel878
+Account:   coc
+Job name:  satmae-download-data
+Partition: coc-cpu
+QOS:       coc-ice
+---------------------------------------
+[Thu Oct  8 12:43:27 PM EDT 2026] Downloading metadata files...
+[Thu Oct  8 12:43:34 PM EDT 2026] Downloading fmow-sentinel.tar.gz (77.5 GB)...
+[Thu Oct  8 05:56:36 PM EDT 2026] Checksums:
+e84ed2ac6fe06ea96f218c9c7324727bfd6627eabe7b6e248b8f43422bde5c6a  val.csv
+1e775acbf0fa44fc7c2dd1d6b60204289b4990e9cb388027582ebfcc46b7ccea  fmow-sentinel.tar.gz
+[Thu Oct  8 05:57:41 PM EDT 2026] Archive layout (first entries):
+fmow-sentinel/
+fmow-sentinel/train/
+fmow-sentinel/train/stadium/
+fmow-sentinel/train/stadium/stadium_449/
+fmow-sentinel/train/stadium/stadium_449/stadium_449_107.tif
+[Thu Oct  8 06:07:01 PM EDT 2026] Extracting validation split only...
+[Thu Oct  8 06:17:52 PM EDT 2026] Extracted image count:
+92263
+80G	/home/hice1/dpatel878/scratch/satmae-reproducible-inference/data
+[Thu Oct  8 06:18:08 PM EDT 2026] Done.
+---------------------------------------
+Begin Slurm Epilog: Oct-08-2026 18:18:08
+Job ID:        6107078
+User ID:       dpatel878
+Account:       coc
+Job name:      satmae-download-data
+Resources:     cpu=2,mem=8G,node=1
+Rsrc Used:     cput=11:09:22,vmem=0,walltime=05:34:41,mem=8387748K,energy_used=0
+Partition:     coc-cpu
+QOS:           coc-ice
+Nodes:         atl1-1-01-005-3-1
+---------------------------------------
